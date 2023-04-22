@@ -1,0 +1,19 @@
+<div class="post">
+  <div class="post-header">
+    <img class="post-author-image" src="https://fastly.picsum.photos/id/756/50/50.jpg?hmac=zj99AVlqNuzNcP61ujvtpYbt_XypOpfvBlAi85OiODk" alt="{{ post.author.username }}">
+    <div class="post-author-name">{{ post.author.username }}</div>
+    <div class="post-time">{{ post.created_at|date:'d/m/Y H:i:s' }}</div>
+    <div class="post-feeling">
+      {% if post.emotion == 1 %}<i class="fa-solid fa-face-smile"></i>{% endif %}
+      {% if post.emotion == 0 %}<i class="fa-solid fa-face-meh-blank"></i>{% endif %}
+      {% if post.emotion == -1 %}<i class="fa-solid fa-face-angry"></i>{% endif %}
+    </div>
+  </div>
+  <div class="post-body">
+    <p>{{ post.content }}</p>
+  </div>
+  <div class="post-footer">
+    <button class="btn post-like-btn"><i class="fa fa-heart"></i>{{ post.likes.count }}</button>
+    <button class="btn post-comment-btn"><i class="fa fa-comment"></i>{{ post.comments.count }}</button>
+  </div>
+</div>

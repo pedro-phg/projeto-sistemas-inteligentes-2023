@@ -1,0 +1,108 @@
+/* Login Area */
+
+.form-container {
+    padding: 48px;
+    width: 480px;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 5px;
+    background-color: ;
+}
+
+.login-form-head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container .block-text{
+    text-align: center;
+    margin: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container .btn-div{
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.login-container .input-area p:nth-child(1) label, p:nth-child(2) label {
+    display: none;
+}
+
+.form-container input{
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 6px 12px;
+    background-color: aliceblue;
+    border-radius: 25px;
+}
+
+.form-container .input-area{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-container i{
+    font-size: 36px;
+}
+
+.form-container button {
+    border-radius: 25px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 6px 12px;
+}
+.form-container button:hover {
+    background-color: rgb(39, 39, 39);
+}
+
+.form-container h1 {
+    font-size: 28px;
+}
+
+/* Cadastro */
+
+.signup-container label {
+    display: none;
+}
+
+.signup-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-area{
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-container input{
+    width: 300px;
+}
+
+.signup-container .text-div{
+    margin: 24px;
+}
+
+.logout-container button{
+    padding: 6px 24px;
+    background-color: white;
+    border: 1px solid rgb(198, 198, 198);
+    color: black;
+}
+
+.logout-container button:hover{
+    color: white;
+    background-color: rgb(112, 14, 14);
+}
+

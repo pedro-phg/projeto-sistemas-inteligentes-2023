@@ -1,0 +1,159 @@
+:root{
+    --primary-color: #1A8CD8;
+    --secondary-color: whitesmoke;
+}
+
+body {
+
+}
+
+.sidebar {
+    height: 100vh;
+}
+
+.sidebar-list{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    list-style: none;
+}
+
+.sidebar-list li{
+
+    border-radius: 4px;
+    padding: 6px 12px;
+}
+
+.posts-area {
+    margin-top: 48px;
+}
+
+.post {
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 20px;
+    width: 540px;
+  }
+  
+  .post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .post-header .post-feeling{
+    position: absolute;
+    right: 0;
+  }
+  
+  .post-author-image {
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .post-author-name {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .post-time {
+    color: #999;
+    font-size: 12px;
+  }
+  
+  .post-body p {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .post-footer {
+    display: flex;
+  }
+  
+  .post-like-btn,
+  .post-comment-btn {
+    margin-right: 10px;
+  }
+  
+  .post-like-btn i,
+  .post-comment-btn i {
+    margin-right: 5px;
+  }
+
+  .post-like-btn i:hover{
+    color: rgb(189, 94, 169);
+  }
+
+  .post-comment-btn i:hover{
+    color: var(--primary-color)
+  }
+
+  /* POST FORM */
+  
+  .post-form {
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 540px;
+  }
+  .post-form textarea {
+    border: none;
+    height: 80px;
+    resize: none;
+  }
+
+  .post-form label{
+    display: none;
+  }
+  .post-form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+  }
+  .post-form-footer .btn {
+    background-color: #ffffff;
+    border-color: white;
+    margin-right: 10px;
+    color: black;
+  }
+  .post-form-footer .btn:hover {
+    /* background-color: #0c85d0; */
+    color: #1A8CD8;
+  }
+  .post-form-charcount {
+    color: #999;
+    font-size: 14px;
+  }
+
+  .form-control:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.btn:focus {
+    outline: none;
+  }
+  
+/* Results  */
+
+.results-header h2{
+  margin-bottom: 48px;
+  font-size: 24px;
+}
+
+.results-area h3, p{
+  margin-top: 24px;
+}
+
+.results-area {
+  margin-top: 48px;
+}
+  
