@@ -21,9 +21,7 @@ def Feed(request):
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
-            post.translate_text_to_english()
             post.predict_emotion()
-            post.translate_text_to_portuguese()
             post.save()
             return redirect('feed')
     else:

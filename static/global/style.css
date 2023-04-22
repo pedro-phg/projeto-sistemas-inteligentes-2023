@@ -1,11 +1,15 @@
 /* Login Area */
 
+body {
+    background-color: #15202B;
+    color: whitesmoke;
+  }
+
 .form-container {
     padding: 48px;
     width: 480px;
-    border: 1px solid rgb(209, 209, 209);
+    border: 1px solid #1c2b3a;
     border-radius: 5px;
-    background-color: ;
 }
 
 .login-form-head{
@@ -54,12 +58,13 @@
 
 .form-container button {
     border-radius: 25px;
-    background-color: rgb(0, 0, 0);
+    background-color: #1c2b3a;
+    border: none;
     color: white;
     padding: 6px 12px;
 }
 .form-container button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #20364d;
 }
 
 .form-container h1 {
@@ -97,12 +102,11 @@
 .logout-container button{
     padding: 6px 24px;
     background-color: white;
-    border: 1px solid rgb(198, 198, 198);
     color: black;
 }
 
 .logout-container button:hover{
     color: white;
-    background-color: rgb(112, 14, 14);
+    background-color: #1c2b3a;
 }
 

@@ -30,4 +30,7 @@ class Post(models.Model):
         translated_text = translator.translate(self.content, dest='pt').text
         self.content = translated_text
         return translated_text
+    
+    def __str__(self) -> str:
+        return f'{self.author} ({self.content})'
 

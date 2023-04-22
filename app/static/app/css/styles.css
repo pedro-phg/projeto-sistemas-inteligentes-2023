@@ -4,7 +4,8 @@
 }
 
 body {
-
+  background-color: #15202B;
+  color: var(--secondary-color);
 }
 
 .sidebar {
@@ -25,13 +26,30 @@ body {
     padding: 6px 12px;
 }
 
+.main-menu a{
+  color: white !important;
+}
+
+.main-menu {
+  border-bottom: 1px solid #1c2b3a;
+}
+
+.dropdown-menu {
+  background-color: #1c2b3a;
+}
+
+.dropdown-menu .dropdown-item:hover{
+  background-color: #233649;;
+}
+
 .posts-area {
     margin-top: 48px;
 }
 
 .post {
     margin: 0 auto;
-    border: 1px solid #ddd;
+    /* border: 1px solid #385573; */
+    background-color: #1c2b3a;
     border-radius: 10px;
     padding: 24px;
     margin-bottom: 20px;
@@ -82,10 +100,12 @@ body {
   .post-like-btn i,
   .post-comment-btn i {
     margin-right: 5px;
+    color: var(--secondary-color);
   }
 
   .post-like-btn i:hover{
     color: rgb(189, 94, 169);
+    fill: #1A8CD8;
   }
 
   .post-comment-btn i:hover{
@@ -96,17 +116,23 @@ body {
   
   .post-form {
     margin: 0 auto;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    background-color: #1c2b3a;
+    border-radius: 15px;
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 24px;
     width: 540px;
   }
   .post-form textarea {
     border: none;
     height: 80px;
     resize: none;
+    background-color: #1c2b3a;
+  }
+
+  .post-form textarea:focus{
+    background-color: #1c2b3a;
+    outline: none;
+    color: var(--secondary-color);
   }
 
   .post-form label{
@@ -119,10 +145,9 @@ body {
     padding-top: 10px;
   }
   .post-form-footer .btn {
-    background-color: #ffffff;
-    border-color: white;
+    background-color: #1c2b3a;
+    border: none;
     margin-right: 10px;
-    color: black;
   }
   .post-form-footer .btn:hover {
     /* background-color: #0c85d0; */
@@ -132,6 +157,34 @@ body {
     color: #999;
     font-size: 14px;
   }
+
+  .happy-icon:hover{
+    color: rgb(255, 255, 47);
+    animation: happy-glow 1s infinite alternate;
+    cursor: pointer;
+  }
+
+  .neutral-icon:hover{
+    color: rgb(47, 217, 255);
+    cursor: pointer;
+  }
+
+
+  .angry-icon:hover{
+    color: rgb(255, 47, 147);
+    cursor: pointer;
+    animation: angry-glow 1s infinite alternate;
+  }
+
+  @keyframes angry-glow {
+    from {
+      color: var(--secondary-color) /* Amarelo */
+    }
+    to {
+      color: rgb(255, 47, 147);
+    }
+  }
+
 
   .form-control:focus {
     box-shadow: none;

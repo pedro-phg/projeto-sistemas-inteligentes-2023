@@ -4,16 +4,16 @@
     <div class="post-author-name">{{ post.author.username }}</div>
     <div class="post-time">{{ post.created_at|date:'d/m/Y H:i:s' }}</div>
     <div class="post-feeling">
-      {% if post.emotion == 1 %}<i class="fa-solid fa-face-smile"></i>{% endif %}
-      {% if post.emotion == 0 %}<i class="fa-solid fa-face-meh-blank"></i>{% endif %}
-      {% if post.emotion == -1 %}<i class="fa-solid fa-face-angry"></i>{% endif %}
+      {% if post.emotion == 1 %}<i class="fa-regular fa-face-smile happy-icon" title='Post positivo'></i></i>{% endif %}
+      {% if post.emotion == 0 %}<i class="fa-regular fa-face-meh neutral-icon" title='Post neutro'></i></i>{% endif %}
+      {% if post.emotion == -1 %}<i class="fa-regular fa-face-angry angry-icon"  title='Post negativo'></i>{% endif %}
     </div>
   </div>
   <div class="post-body">
     <p>{{ post.content }}</p>
   </div>
   <div class="post-footer">
-    <button class="btn post-like-btn"><i class="fa fa-heart"></i>{{ post.likes.count }}</button>
-    <button class="btn post-comment-btn"><i class="fa fa-comment"></i>{{ post.comments.count }}</button>
+    <button class="btn post-like-btn"><i class="fa-regular fa-heart"></i></i>{{ post.likes.count }}</button>
+    <button class="btn post-comment-btn"><i class="fa-regular fa-comment"></i></i>{{ post.comments.count }}</button>
   </div>
 </div>
