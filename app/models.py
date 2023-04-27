@@ -1,7 +1,9 @@
 import pickle
 
+from allauth.account.models import EmailAddress
 from django.contrib.auth.models import User
 from django.db import models
+from django.utils import timezone
 from googletrans import Translator
 
 
@@ -34,3 +36,16 @@ class Post(models.Model):
     def __str__(self) -> str:
         return f'{self.author} ({self.content})'
 
+class Like(models.Model):
+    user = models.ForeignKey(EmailAddress, on_delete=models.CASCADE)
+    post = models.ForeignKey('Post', on_delete=models.CASCADE)
+    created_at = models.DateTimeField(default=timezone.now)
+
+    class Meta:
+        unique_together = ['user', 'post']
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+    author = models.ForeignKey(EmailAddress, on_delete=models.CASCADE)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)

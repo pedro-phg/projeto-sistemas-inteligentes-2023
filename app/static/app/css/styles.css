@@ -55,6 +55,15 @@ body {
     margin-bottom: 20px;
     width: 540px;
   }
+
+  .post img{
+    width: 30px;
+  }
+
+  .post:hover{
+    background-color: #24374a;
+    cursor: pointer;
+  }
   
   .post-header {
     display: flex;
@@ -196,6 +205,21 @@ body {
   }
   
 /* Results  */
+
+.results-filter-area{
+  margin: 0 auto;
+  width: 500px;
+  margin-top: 48px;
+  border-radius: 15px;
+  padding: 24px;
+  outline: 1px solid #233649;
+}
+
+.inputs label, .inputs input {
+  display: inline-block;
+  margin-right: 10px;
+}
+
 
 .results-header h2{
   margin-bottom: 48px;

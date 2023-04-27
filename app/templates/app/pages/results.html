@@ -18,15 +18,19 @@
         
         {% if posts %}
         <div class="results-filter-area">
-            <form id="search-emotion-form" method="get">
-                <label for="happy">Qualquer Emoção</label>
-                <input type="radio" name="emotion" id="happy" value="">
-                <label for="happy">Feliz</label>
-                <input type="radio" name="emotion" id="happy" value="1">
-                <label for="neutral">Neutro</label>
-                <input type="radio" name="emotion" id="neutral" value="0">
-                <label for="unhappy">Infeliz</label>
-                <input type="radio" name="emotion" id="unhappy" value="-1">
+            <form id="search-emotion-form" method="get" class='search-form'>
+                <div class="inputs">
+                    <label for="happy">Qualquer Emoção</label>
+                    <input type="radio" name="emotion" id="happy" value="">
+                    <label for="happy">Feliz</label>
+                    <input type="radio" name="emotion" id="happy" value="1">
+                    <label for="neutral">Neutro</label>
+                    <input type="radio" name="emotion" id="neutral" value="0">
+                    <label for="unhappy">Infeliz</label>
+                    <input type="radio" name="emotion" id="unhappy" value="-1">
+                    <input type="hidden" name="q" value="{{ query }}">
+                    <button type="submit" id="filter-button">Filtrar</button>
+                </div>
             </form>
         </div>
         <div class="posts-area col-md-8 text-center mx-auto">
@@ -39,22 +43,38 @@
         </div>
         {% else %}
             <div class="results-area col-md-4 text-center mx-auto">
+                <div class="results-filter-area">
+                    <form id="search-emotion-form" method="get" class='search-form'>
+                        <div class="inputs">
+                            <label for="happy">Qualquer Emoção</label>
+                            <input type="radio" name="emotion" id="happy" value="">
+                            <label for="happy">Feliz</label>
+                            <input type="radio" name="emotion" id="happy" value="1">
+                            <label for="neutral">Neutro</label>
+                            <input type="radio" name="emotion" id="neutral" value="0">
+                            <label for="unhappy">Infeliz</label>
+                            <input type="radio" name="emotion" id="unhappy" value="-1">
+                            <input type="hidden" name="q" value="{{ query }}">
+                            <button type="submit" id="filter-button">Filtrar</button>
+                        </div>
+                    </form>
+                </div>
                 <img src="https://abs.twimg.com/responsive-web/client-web/rubber-chicken-400x200.v1.95f66339.png" alt="">
                 <h3>Não há resultados para: {{ query }}</h3>
                 <p>Procure pesquisar por outro assunto, talvez nenhum autor tenha feito um post sobre o que você pesquisou. Espero que compreenda!</p>
             </div>
         {% endif %}
     </div>
-    
+      
 
-    <script>
+    {% comment %} <script>
         const radios = document.querySelectorAll('input[type=radio][name=emotion]');
         radios.forEach(radio => {
             radio.addEventListener('change', event => {
                 document.getElementById('search-emotion-form').submit();
             });
         });
-    </script>
+    </script> {% endcomment %}
 
 </body>
 </html>

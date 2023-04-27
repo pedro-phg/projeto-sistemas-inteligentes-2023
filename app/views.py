@@ -30,8 +30,12 @@ def Feed(request):
     return render(request, 'app/base/base.html', {'form': form, 'posts' : posts})
 
 def search_posts(request):
+
     query = request.GET.get('q')
     emotion = request.GET.get('emotion')
+
+    print(query)
+    print(emotion)
 
     posts = Post.objects.all()
     if query and emotion:
