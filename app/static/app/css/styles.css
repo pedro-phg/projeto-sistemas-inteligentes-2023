@@ -74,7 +74,13 @@ body {
 
   .post-header .post-feeling{
     position: absolute;
+    display: flex;
+    gap: 10px;
     right: 0;
+  }
+
+  .post-header .danger-post{
+    animation: angry-glow 1s infinite alternate;
   }
   
   .post-author-image {
@@ -234,3 +240,11 @@ body {
   margin-top: 48px;
 }
   
+#filter-button{
+  border: none;
+  outline: none;
+  background-color: #233649;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+}

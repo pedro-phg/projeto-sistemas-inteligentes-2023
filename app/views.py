@@ -22,6 +22,7 @@ def Feed(request):
             post = form.save(commit=False)
             post.author = request.user
             post.predict_emotion()
+            post.verify_if_could_be_racist_or_sexist()
             post.save()
             return redirect('feed')
     else:

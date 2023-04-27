@@ -4,9 +4,10 @@
     <div class="post-author-name">{{ post.author.username }}</div>
     <div class="post-time">{{ post.created_at|date:'d/m/Y H:i:s' }}</div>
     <div class="post-feeling">
-      {% if post.emotion == 1 %}<i class="fa-regular fa-face-smile happy-icon" title='Post positivo'></i></i>{% endif %}
-      {% if post.emotion == 0 %}<i class="fa-regular fa-face-meh neutral-icon" title='Post neutro'></i></i>{% endif %}
-      {% if post.emotion == -1 %}<i class="fa-regular fa-face-angry angry-icon"  title='Post negativo'></i>{% endif %}
+      {% if post.emotion == 4 %}<i class="fa-regular fa-face-smile happy-icon" title='Post positivo'></i></i>{% endif %}
+      {% if post.emotion == 2 %}<i class="fa-regular fa-face-meh neutral-icon" title='Post neutro'></i></i>{% endif %}
+      {% if post.emotion == 0 %}<i class="fa-regular fa-face-angry angry-icon"  title='Post negativo'></i>{% endif %}
+      {% if post.racist_sexist == 1 %}<i class="fa-solid fa-triangle-exclamation danger-post" title=' Este conteúdo pode apresentar linguagem ou imagens que são ofensivas ou discriminatórias em relação a raça, gênero ou orientação sexual. Por favor, pense cuidadosamente antes de prosseguir com a visualização.'></i>{% endif %}
     </div>
   </div>
   <div class="post-body">
